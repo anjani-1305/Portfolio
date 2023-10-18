@@ -1,4 +1,4 @@
-import { Container, Row , Col, TabContainer, TabContent, Tab , Nav, Anchor} from "react-bootstrap";
+import { Container, Row , Col, TabContainer, TabContent, Tab , Nav,} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp from "../assets/img/color-sharp2.png";
 import bhumi from "../assets/img/Bhumi.png";
