@@ -45,14 +45,13 @@ export const NavBar = () => {
             <Nav.Link href="#home" className={activeLink==='home'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#aboutme" className={activeLink==='about'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>About Me</Nav.Link>
             <Nav.Link href="#skills" className={activeLink==='skills'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
-            <Nav.Link href="#projects" className={activeLink==='projects'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-                <a  href='#'><img src = {Icon1} alt = ""  /></a>
-                <a  href='#'><img src = {Icon2} alt = ""  /></a>
-                <a  href='#'><img src = {Icon3} alt = ""  /></a>
-                <a  href='#'><img src = {Icon4} alt = ""  /></a>
+                <a  href='https://www.linkedin.com/in/anjanikumar13/' target="_blank"><img src = {Icon1} alt = ""  /></a>
+                <a  href='https://www.instagram.com/anjani_1302/' target="_blank"><img src = {Icon2} alt = ""  /></a>
+                <a  href='https://github.com/anjani-1305' target="_blank"><img src = {Icon3} alt = ""  /></a>
+                <a  href='mailto:kanjani142@gmail.com' target="_blank"><img src = {Icon4} alt = ""  /></a>
             </div>
             <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>
