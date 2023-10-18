@@ -4,8 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../assets/img/logo.ico';
-import Icon1 from '../assets/img/icon1.svg';
-import Icon2 from '../assets/img/icon2.svg';
+import Icon1 from '../assets/img/icon1.png';
+import Icon2 from '../assets/img/icon2.png';
+import Icon3 from '../assets/img/icon3.png';
+import Icon4 from '../assets/img/icon4.png';
 
 export const NavBar = () => {
   const[activeLink , setActiveLink] = useState('home');
@@ -41,13 +43,16 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home" className={activeLink==='home'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="#aboutme" className={activeLink==='about'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>About Me</Nav.Link>
             <Nav.Link href="#skills" className={activeLink==='skills'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#projects" className={activeLink==='projects'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-                <a  href='#'><img src = {Icon1} alt = ""/></a>
-                <a  href='#'><img src = {Icon2} alt = ""/></a>
+                <a  href='#'><img src = {Icon1} alt = ""  /></a>
+                <a  href='#'><img src = {Icon2} alt = ""  /></a>
+                <a  href='#'><img src = {Icon3} alt = ""  /></a>
+                <a  href='#'><img src = {Icon4} alt = ""  /></a>
             </div>
             <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>
