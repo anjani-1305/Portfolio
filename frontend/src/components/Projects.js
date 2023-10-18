@@ -1,4 +1,12 @@
-import { Container, Row , Col, TabContainer, TabContent, Tab , Nav,} from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  TabContainer,
+  TabContent,
+  Tab,
+  Nav,
+} from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp from "../assets/img/color-sharp2.png";
 import bhumi from "../assets/img/Bhumi.png";
@@ -7,6 +15,8 @@ import blog from "../assets/img/Blog.png";
 import eats from "../assets/img/Myeats.png";
 import study from "../assets/img/Study.png";
 import onepage from "../assets/img/Onepage.png";
+import TrackVisibility from "react-on-screen";
+import 'animate.css';
 export const Projects = () => {
   const projects = [
     {
@@ -48,68 +58,69 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p>
-              "Explore my diverse projects, from the Bhumi-NGO website merging
-              React and Django for a noble cause to the RealEstimate home price
-              prediction model. The elegant Blog-Django project uses pure static
-              HTML and CSS for blogging, while MyEatss offers a user-friendly
-              dining experience. StudyBud, entirely built on Django, emphasizes
-              my commitment to facilitating learning and innovation."
-            </p>
-            <TabContainer className="projects-tabs" defaultActiveKey="first">
-            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-              <Nav.Item>
-                <Nav.Link eventKey="first">Tab One</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second">Tab Two</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="third">Tab Three</Nav.Link>
-              </Nav.Item>
-            </Nav>
-            <TabContent>
-              <Tab.Pane eventKey="first">
-                <Row>
-                  {
-                    projects.map((project,index)=>{
-                    return (
-                      <ProjectCard {...project} key={index} />
-                    )
-                    })
-                  }
-                </Row>
-              </Tab.Pane>
-              <Tab.Pane eventKey="second">
-                <Row>
-                  {
-                    projects.map((project,index)=>{
-                    return (
-                      <p>{project.title}</p>
-                    )
-                    })
-                  }
-                </Row>
-              </Tab.Pane>
-              <Tab.Pane eventKey="third">
-                <Row>
-                  {
-                    projects.map((project,index)=>{
-                    return (
-                      <p>{project.title}</p>
-                    )
-                    })
-                  }
-                </Row>
-              </Tab.Pane>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__bounce" : ""}>
+                  <h2>Projects</h2>
+                  <p>
+                    Explore my diverse projects, from the Bhumi-NGO website
+                    merging React and Django for a noble cause to the
+                    RealEstimate home price prediction model. The elegant
+                    Blog-Django project uses pure static HTML and CSS for
+                    blogging, while MyEatss offers a user-friendly dining
+                    experience. StudyBud, entirely built on Django, emphasizes
+                    my commitment to facilitating learning and innovation.
+                  </p>
+                </div>
+              )}
+            </TrackVisibility>
 
-            </TabContent>
+            <TabContainer className="projects-tabs" defaultActiveKey="first">
+              <Nav
+                variant="pills"
+                className="nav-pills mb-5 justify-content-center align-items-center"
+                id="pills-tab"
+              >
+                <Nav.Item>
+                  <Nav.Link eventKey="first">Tab One</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="third">Tab Three</Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <TabContent>
+                <Tab.Pane eventKey="first">
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <ProjectCard {...project} key={index} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <p>{project.title}</p>;
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {projects.map((project, index) => {
+                      return <p>{project.title}</p>;
+                    })}
+                  </Row>
+                </Tab.Pane>
+              </TabContent>
             </TabContainer>
           </Col>
         </Row>
       </Container>
-     <img  className="background-image-right" src={colorSharp}></img>
+      <img className="background-image-right" src={colorSharp}></img>
     </section>
   );
 };

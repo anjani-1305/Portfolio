@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -53,7 +54,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              <div className={isVisible ? "animate__animated animate__rubberBand" : ""}>
                 <span className="tagline">Coding a Smarter Tomorrow</span>
                 <h1>{`Hi! I'm Anjani `}</h1>
                 <h2><span className="txt-rotate" dataPeriod="2000" data-rotate='[ "Coder","AI/ML","Backend-Developer" ]'><span className="wrap">{text}</span></span></h2>
