@@ -1,10 +1,11 @@
 import { Container , Row ,Col } from "react-bootstrap";
 import { MailchimpForm } from "./MailchimpForm";
-import logo from "../assets/img/logo.ico";
+import logo2 from "../assets/img/logo2.ico";
 import icon1 from "../assets/img/icon1.png";
 import icon2 from "../assets/img/icon2.png";
 import icon3 from "../assets/img/icon3.png";
 import icon4 from "../assets/img/icon4.png";
+
 export const Footer = () => {
 
     return(
@@ -13,7 +14,7 @@ export const Footer = () => {
                 <Row className="align-item-center">
                     <MailchimpForm />
                     <Col sm={6}>
-                        <img src={logo} alt="Logo"/>
+                        <img src={logo2} alt="Logo"/>
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
                         <div className="social-icon">

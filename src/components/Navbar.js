@@ -2,7 +2,6 @@ import { useState , useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
 import logo from '../assets/img/logo.ico';
 import Icon1 from '../assets/img/icon1.png';
 import Icon2 from '../assets/img/icon2.png';
@@ -45,7 +44,6 @@ export const NavBar = () => {
             <Nav.Link href="#home" className={activeLink==='home'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#skills" className={activeLink==='skills'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#project" className={activeLink==='project'?'active navbar-link' : 'navbar-link'} onClick={()=>onUpdateActiveLink('projects')}>Projects</Nav.Link>
-
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
